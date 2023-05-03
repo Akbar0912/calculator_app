@@ -1,15 +1,16 @@
 import 'dart:async';
 import 'package:project_kalkulator/MyApps.dart';
 
-final StreamController<String> inputDisplayController = StreamController();
-final StreamController<String> resulDisplayController = StreamController();
+//state management menggunakan stream
+final StreamController<String> inputDisplayController = StreamController();//menampilkan nilai yang diinputkan
+final StreamController<String> resulDisplayController = StreamController();//menampilkan hasil dari inputan
 
 final List<String> tempInputs = []; //variabel penampung nilai sementara
 
 void clearAllinputs() {
   if (tempInputs.isNotEmpty) {
     tempInputs.clear();
-    inputDisplayController.sink.add(tempInputs.join());
+    inputDisplayController.sink.add(tempInputs.join()); //seluruh item yang ada di list digabungan menjadi 1 stream
   }
 }
 

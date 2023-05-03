@@ -4,7 +4,7 @@ import 'package:project_kalkulator/controller/inputDisplay.dart';
 import 'package:flutter/material.dart';
 
 extension StringExtension on String {
-  bool get isNumber => isNotEmpty && contains(RegExp(r'[0-9]'));
+  bool get isNumber => isNotEmpty && contains(RegExp(r'[0-9]'));//untuk pengecekan inputan number
 }
 
 class MyApps extends StatelessWidget {
